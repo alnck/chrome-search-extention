@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Search Extension",
+    "version": "1.2",
+    "description": "Search Google on specified sites.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon16.png"
+    },
+    "icons": {
+      "24": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon32.png",
+      "100": "icons/icon100.png"
+    },
+    "options_page": "options.html",
+    "permissions": ["activeTab", "storage", "tabs", "unlimitedStorage"],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+      },
+      "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+      }
+  }
+  

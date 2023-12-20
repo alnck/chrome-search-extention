@@ -1,0 +1,128 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Search Extension</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #4285f4;
+      font-size: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+      text-align: left;
+      margin-left: 15px;
+    }
+    input {
+      width: calc(100% - 30px);
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-left: 15px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+      width: calc(100% - 30px);
+      margin-left: 8px;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+    #optionsIcon {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background-image: url('icons/options24.png'); /* Sizin ikon dosyanızın yolunu ekleyin */
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 15px;
+    }
+
+    #googleSearchContainer {
+      margin-top: 40px; /* İsterseniz bu mesafeyi istediğiniz gibi ayarlayabilirsiniz */
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Container içeriğine biraz iç boşluk ekleyin */
+    }
+    #googleSearch {
+      flex-grow: 1; /* Google arama içeriğini genişletmek için */
+    }
+
+    #searchQuery {
+      margin-right: 10px; /* Arama kutusu ile Google arama arasında bir boşluk bırakmak için */
+    }
+
+    #searchButton {
+      cursor: pointer;
+      background-color: #4285f4; /* Google renkleri */
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+    #extensionContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    #extensionIcon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="optionsIcon", title="Settings"></div>
+
+  <!-- Google arama içeriğini yeni bir div içine yerleştirin -->
+  <div id="popupContent">
+    <!-- Extension iconunu ekleyin -->
+    <div id="extensionContainer">
+      <img id="extensionIcon" src="icons/icon64.png" alt="Extension Icon">
+    </div>
+
+    <!-- Google arama içeriği -->
+    <div id="googleSearch">
+      <input type="text" id="searchQuery" placeholder="Google Search">
+      <button id="searchButton">Search</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
